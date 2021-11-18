@@ -1,12 +1,13 @@
-section {
+.cart {
     display: flex;
-    position: relative;
-    flex-direction: row;
-    width: 80vw;
+    position: absolute;
+    /*flex-direction: row;*/
+    align-self: auto;
+    width: 100vw;
     height: 70vh;
-    margin: 0 auto;
     border: 1px solid black;
     margin-top: 100px;
+    background-color: bisque;
 }
 
 h2 {
@@ -21,7 +22,7 @@ h2 {
     border: 1px solid black;
 }
 
-.cart {
+.total-cart {
     position: relative;
     width: 30vw;
     padding: 20px;
@@ -42,24 +43,24 @@ h2 {
 }
 
 .cart-container {
-    display: flex;
+    position: absolute;
+    display: inline-flex;
     flex-direction: column;
-    width: 20vw;
+    width: 35vw;
     background-color: aquamarine;
-
+    align-self: flex-end;
 }
 
 .cart-items { 
     display: flex;
     justify-content: space-between;
-    width: 50vw;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid black;
-    margin: 10px 
+    margin: 5px; 
+    font-size: 12px;
 }
 
 .remove-item {
-    margin-right: -80px;
     margin-top: 25px;
     font-weight: 700;
 }
