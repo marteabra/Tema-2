@@ -110,16 +110,44 @@ main {
 }
 
 /*      CART        */
+button {
+    border-radius: 5px;   
+}
 
-.cart {
-    display: flex;
-    position: relative;
-    align-self: auto;
+#navigation button {
+    height: 50px;
+    background-color: white;
+    margin-top: -25px;
+}
+
+#navigation .remove-item button {
+    background-color: grey;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: 17px;
+    font-weight: 700;
+    margin-right: -30px;
+    color: white;
+}
+
+ #navigation .remove-item button:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.cart-container {
+    display: none;
+    position: absolute;
+    flex-direction: column;
     width: 35vw;
     height: 70vh;
-    border: 1px solid black;
-    margin-top: 100px;
-    background-color: bisque;
+    margin-top: 32px;
+    right:0;
+    background-color: white;
+    box-shadow:3px 4px 5px rgb(128, 128, 128, 0.5);
+}
+
+.cart-container-expand{
+    display: block;
 }
 
 .total-cart__summary h2 {
@@ -135,14 +163,16 @@ main {
 }
 
 .total-cart {
-    position: relative;
+    position:absolute;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.3);
     margin: 10px;
-    
+    bottom: 0;
+    width: 33vw;
 }
 
 .total-cart__summary {
+    font-size: 12px;
     margin-bottom: 20px;
 }
 
@@ -158,36 +188,12 @@ main {
     color: black;
 }
 
-.cart-container {
-    position: absolute;
-    display: inline-flex;
-    flex-direction: column;
-    width: 35vw;
-    background-color: aquamarine;
-    align-self: flex-end;
-}
-
 .cart-items { 
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    border: 1px solid black;
     margin: 5px; 
     font-size: 12px;
-}
-
-.remove-item {
-    margin-top: 25px;
-    font-weight: 700;
-}
-
-.remove-item button {
-    background-color:grey;
-}
-
-.remove-item button:hover {
-    background-color: black;
-    color: white;
 }
 
 .image img{
@@ -200,8 +206,4 @@ main {
     text-align: center;
     border-radius: 5px;
     border: solid black 1px
-}
-
-button {
-    border-radius: 5px;   
 }

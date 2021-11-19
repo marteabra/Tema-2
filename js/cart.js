@@ -5,7 +5,7 @@ const product = [
         productInfo: '128 GB',
         productPrice: 12290,
         priceCurrency: 'NOK',
-        productId: '.iphone-13-pro',
+        productId: 'iphone-13-pro',
         productInCart: false
     },
 
@@ -15,7 +15,7 @@ const product = [
         productInfo: '16 GB',
         productPrice: 8490,
         priceCurrency: 'NOK',
-        productId: '.iphone-13',
+        productId: 'iphone-13',
         productInCart: false
     },
 
@@ -25,7 +25,7 @@ const product = [
         productInfo: '16 GB',
         productPrice: 6990,
         priceCurrency: 'NOK',
-        productId: '.iphone-12',
+        productId: 'iphone-12',
         productInCart: false
     },
 
@@ -35,7 +35,7 @@ const product = [
         productInfo: '16 GB',
         productPrice: 6290,
         priceCurrency: 'NOK',
-        productId: '.iphone-11',
+        productId: 'iphone-11',
         productInCart: false
     },
 
@@ -55,7 +55,7 @@ const product = [
         productInfo: '16 GB',
         productPrice: 5990,
         priceCurrency: 'NOK',
-        productId: '.iphone-x',
+        productId: 'iphone-x',
         productInCart: false
     }
 ]
@@ -119,7 +119,7 @@ function renderAllProducts() {
 }*/
 
 
-let carts = document.querySelectorAll('.add-to-cart');
+const carts = document.querySelectorAll('.add-to-cart');
 
 
 for (let i = 0; i < carts.length; i++) {
@@ -133,8 +133,20 @@ function cartNumbers(event) {
 
     productNumbers = parseInt(productNumbers);
 
-    localStorage.setItem('cartNumbers', 1);
+    sessionStorage.setItem('cartNumbers', 1);
 }
+
+
+function init() {
+    const openCart = document.querySelector('.cart-icon');
+    const cart = document.querySelector('.cart-container');
+    openCart.addEventListener('click', () => {
+        cart.classList.toggle('cart-container-expand');
+    });
+}
+
+init();
+
 
 
 /*const cart = []
